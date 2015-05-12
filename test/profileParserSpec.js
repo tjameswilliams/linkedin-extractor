@@ -104,5 +104,20 @@ describe('Linkedin Profile Parser', function(){
     });
 
   });    
+  
+  describe('#getProjects', function(){
+
+    it('should work', function(){
+      var result = pp.getProjects();
+      expect(result.length).to.eql(1);
+      expect(result[0]).to.eql({
+        id: '3',
+        projectName: 'Global Challenge Business Simulation Project',
+        date: 'December 2008 – December 2008',
+        description: '•Forecasted markets, implemented new technology initiatives, maintained budget and managed production. \n•Achieved the Warren Buffet Award denoting the highest cumulative shareholder return and stock price.'
+      });
+    });
+
+  });    
 
 });
